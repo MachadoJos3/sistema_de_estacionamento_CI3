@@ -27,6 +27,12 @@
         <link rel="stylesheet" href="<?php echo base_url('public/plugins/owl.carousel/dist/assets/owl.carousel.min.css'); ?>">
         <link rel="stylesheet" href="<?php echo base_url('public/plugins/owl.carousel/dist/assets/owl.theme.default.min.css'); ?>"> -->
     <link rel="stylesheet" href="<?php echo base_url('public/dist/css/theme.min.css'); ?>">
+
+    <?php if(isset($styles)): ?><!--Se $style estiver setada-->
+        <?php foreach ($styles as $style) :?><!--Para cada variavel style chame a de style -->
+            <link rel="stylesheet" href="<?php echo base_url('public/'.$style);?>"><!--e imprima todos os estilos contidos-->
+        <?php endforeach; ?>
+    <?php endif; ?>
 </head>
 
 <body>

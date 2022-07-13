@@ -84,15 +84,14 @@
     </div>
 </div>
 
-<script src="<?php echo base_url('public/src/js/vendor/modernizr-2.8.3.min.js'); ?>"></script>
 
 <script src="<?php echo base_url('public/src/js/vendor/jquery-3.3.1.min.js'); ?>"></script>
 <script src="<?php echo base_url('public/plugins/popper.js/dist/umd/popper.min.js'); ?>"></script>
 <script src="<?php echo base_url('public/plugins/bootstrap/dist/js/bootstrap.min.js'); ?>"></script>
 <script src="<?php echo base_url('public/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js'); ?>"></script>
 <script src="<?php echo base_url('public/plugins/screenfull/dist/screenfull.js'); ?>"></script>
-<!-- 
-<script src="<?php echo base_url('public/plugins/datatables.net/js/jquery.dataTables.min.js'); ?>"></script>
+
+<!--   <script src="<?php echo base_url('public/plugins/datatables.net/js/jquery.dataTables.min.js'); ?>"></script>
 <script src="<?php echo base_url('public/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js'); ?>"></script>
 <script src="<?php echo base_url('public/plugins/datatables.net-responsive/js/dataTables.responsive.min.js'); ?>"></script>
 <script src="<?php echo base_url('public/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js'); ?>"></script>
@@ -107,6 +106,15 @@
 <script src="<?php echo base_url('public/js/charts.js'); ?>"></script> -->
 
 <script src="<?php echo base_url('public/dist/js/theme.min.js'); ?>"></script>
+
+<?php if (isset($scripts)) : ?>
+
+    <?php foreach ($scripts as $script) : ?>
+
+        <script type="text/javascript" src="<?php echo base_url('public/' . $script); ?>"></script>
+
+    <?php endforeach; ?>
+<?php endif; ?>
 
 </body>
 
