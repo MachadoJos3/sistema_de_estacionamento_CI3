@@ -30,6 +30,20 @@
                 </div>
             </div>
 
+            <?php if($message = $this->session->flashdata('sucesso')): ?>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="alert bg-success alert-success text-white alert-dismissible fade show" role="alert">
+                            <strong><i class="fas fa-smile"></i>&nbsp;<?php echo $message ?></strong>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <i class="ik ik-x"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            <?php endif;?>
 
             <div class="row">
                 <div class="col-md-12">
@@ -64,7 +78,7 @@
                                             <!--ternario se active for igual 1 imprima sim se nao imprima nao-->
                                             <td class="text-right">
                                                 <!--ABAIXO O COMANDO FAZ COM Q exclua ou edite usuarios-->
-                                                <a data-toggle="tooltip" data-placement="bottom" title="Editar <?php echo $this->router->fetch_class(); ?>" href="<?php echo base_url('usuarios/core/'.$user->id)?>" class="btn btn-icon btn-primary"><i class="ik ik-edit-2"></i></a>
+                                                <a data-toggle="tooltip" data-placement="bottom" title="Editar <?php echo $this->router->fetch_class(); ?>" href="<?php echo base_url('usuarios/core/' . $user->id) ?>" class="btn btn-icon btn-primary"><i class="ik ik-edit-2"></i></a>
                                                 <a data-toggle="tooltip" data-placement="bottom" title="Excluir <?php echo $this->router->fetch_class(); ?>" href="" class="btn btn-icon btn-danger"><i class="ik ik-trash-2"></i></a>
                                             </td>
                                         </tr>

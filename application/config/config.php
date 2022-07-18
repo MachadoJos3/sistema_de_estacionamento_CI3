@@ -35,7 +35,7 @@ $config['base_url'] = 'http://localhost/sistema_de_estacionamento_CI3/';//aqui e
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';//apagamos o index.php para ele nao ficar aparecendo quando editamos um user
 
 /*
 |--------------------------------------------------------------------------

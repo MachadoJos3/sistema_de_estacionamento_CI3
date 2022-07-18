@@ -63,7 +63,7 @@
                                         <label>Usuário</label>
                                         <!--se tem uma var usuario significa que estamos editando-->
                                         <input type="text" class="form-control" name="username" value="<?php echo (isset($usuario) ? $usuario->username : set_value('username')); ?>">
-                                        <!-- <php echo form_error('username', '<div class="text-danger">', '</div>')> -->
+                                        <?php echo form_error('username', '<div class="text-danger">', '</div>')?>
                                     </div>
                                     <div class="col-md-4">
                                         <label>Email (Login)</label>
@@ -131,7 +131,7 @@
                                 <?php if(isset($usuario)) :?>
                                 <div class="form-group row">
                                     <div class="col-md-12"><!--aqui e para enviar o id do usuario para fazer futuras verfificaçoes-->
-                                        <input type="hidden" class="form-control" name="username" value="<?php echo $usuario->id?>">
+                                        <input type="hidden" class="form-control" name="username_id" value="<?php echo $usuario->id?>">
                                     </div>
                                 </div>
                                 <?php endif; ?>
